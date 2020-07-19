@@ -38,7 +38,7 @@ struct CardHeader: View {
             }
                 .opacity(1 - (self.foldPercentage / 100))
         }
-        .offset(x: 0, y: foldOffset < 0 ? 0 : getOffset())
+            .offset(x: 0, y: foldOffset < 0 ? 0 : getOffset())
             .font(.headline)
     }
     

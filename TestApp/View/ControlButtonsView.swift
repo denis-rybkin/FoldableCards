@@ -12,6 +12,8 @@ struct ControlButtonsView: View {
     
     @Binding var foldPercentage: Double
     
+    let foldedLabelsOffset: CGFloat = -20
+    
     var body: some View {
 //        GeometryReader { geometry in
             HStack {
@@ -35,8 +37,7 @@ struct ControlButtonsView: View {
                         .font(.system(size: 26))
                         .background(Circle().fill(Color.white.opacity(0.7)))
                         .shadow(radius: 10, x: 0, y: 20)
-                        .offset(x: (UIScreen.main.bounds.width/5) * CGFloat(self.foldPercentage / 100), y: 0)
-                        
+                        .offset(x: (UIScreen.main.bounds.width/5) * CGFloat(self.foldPercentage / 100))
                 }
                 Spacer()
                 Button(action: {
@@ -48,12 +49,16 @@ struct ControlButtonsView: View {
                 Button(action: {
                 }) {
                     Image(systemName: "ellipsis")
-    //                    .opacity(1 - (self.foldPercentage / 100))
                 }
             }
             .padding(.bottom, 30)
             .foregroundColor(.black)
             .font(.system(size: 26))
+            .offset(y: -getOffset())
         }
 //    }
+    private func getOffset() -> CGFloat {
+        print(self.foldPercentage)
+        return (foldedLabelsOffset * CGFloat(self.foldPercentage/100))
+    }
 }

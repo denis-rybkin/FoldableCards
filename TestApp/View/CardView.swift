@@ -98,7 +98,7 @@ struct CardView: View {
                             
                             if offset < 0 { return }
                             self.foldOffset = offset
-                            let percent = (100 / (self.viewHeight(geometry) - self.foldedHeight())) * offset
+                            let percent = (offset / geometry.size.height) * 100
                             self.foldPercentage = Double(percent)
                             
                         case .none:
