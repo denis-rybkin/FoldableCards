@@ -24,15 +24,12 @@ struct CardHeader: View {
             Spacer()
             Button(action: {
             }) {
-                Text(" Follow ")
+                Text("Follow")
                     .padding(7)
+                    .padding([.leading, .trailing], 5)
                     .background(Color.black.opacity(0.2))
                     .cornerRadius(15)
-                    .frame(width: 100,
-                           height: 20,
-                           alignment: .center)
                     .foregroundColor(.white)
-                    
             }
         }
         .font(.headline)

@@ -47,9 +47,9 @@ struct CardView: View {
                 
                 // Bottom Half
                 VStack {
-                    Waveform()
-                        .opacity(1 - (self.foldPercentage / 100))
-//                        .background(Color.purple.opacity(0.3)) // TODO: - delete
+//                    Waveform()
+//                        .opacity(1 - (self.foldPercentage / 100))
+////                        .background(Color.purple.opacity(0.3)) // TODO: - delete
                     Text("0:37")
                         .foregroundColor(.black)
                         .opacity(1 - (self.foldPercentage / 100))
@@ -64,7 +64,7 @@ struct CardView: View {
             .padding(.top, self.foldOffset))
             
             .cornerRadius(self.inset)
-                .animation(.interactiveSpring())
+            .animation(.interactiveSpring())
             .offset(x: self.translation.width, y: 0)
                 
             .rotationEffect(.degrees(Double(self.translation.width
