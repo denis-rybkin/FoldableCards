@@ -38,7 +38,7 @@ struct CardView: View {
                 
                 // Top Half
                 VStack {
-                    CardHeader(foldOffset: self.$foldOffset)
+                    CardHeader(foldOffset: self.$foldOffset, foldPercentage: self.$foldPercentage)
                         .padding(self.inset)
                     MessageView(foldPercentage: self.$foldPercentage)
                         .padding([.leading, .trailing], self.inset)

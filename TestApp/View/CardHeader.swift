@@ -11,6 +11,7 @@ import SwiftUI
 struct CardHeader: View {
     
     @Binding var foldOffset: CGFloat
+    @Binding var foldPercentage: Double
     
     var body: some View {
         HStack(alignment: .top) {
@@ -21,7 +22,6 @@ struct CardHeader: View {
                     .foregroundColor(.black)
                     .opacity(0.5)
             }
-            .offset(x: 0, y: foldOffset < 0 ? 0 : foldOffset)
             
             Spacer()
             
@@ -34,7 +34,9 @@ struct CardHeader: View {
                     .cornerRadius(15)
                     .foregroundColor(.white)
             }
+                .opacity(1 - (self.foldPercentage / 100))
         }
-        .font(.headline)
+        .offset(x: 0, y: foldOffset < 0 ? 0 : (foldOffset + (-10 * CGFloat(self.foldPercentage/100))))
+            .font(.headline)
     }
 }
