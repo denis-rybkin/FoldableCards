@@ -34,7 +34,7 @@ struct CardView: View {
     
     var body: some View {
         GeometryReader { geometry in
-            VStack {
+            VStack(spacing: 0) {
                 
                 // Top Half
                 VStack {
@@ -43,7 +43,7 @@ struct CardView: View {
                     MessageView(foldPercentage: self.$foldPercentage)
                         .padding([.leading, .trailing], self.inset)
                 }
-                .background(Color.blue.opacity(0.2)) // TODO: - delete
+                    .background(Color.blue.opacity(0.2)) // TODO: - delete
                 
                 Divider().background(Color.blue)
                 
@@ -71,7 +71,6 @@ struct CardView: View {
             .cornerRadius(self.cornerRadius)
             .animation(.interactiveSpring())
             .offset(x: self.translation.width, y: 0)
-            
             .rotationEffect(.degrees(Double(self.translation.width
                                             / geometry.size.width) * 25),
                             anchor: .bottom)
@@ -125,7 +124,10 @@ struct CardView: View {
             
 //                .clipShape(RoundedRectangle(cornerRadius: self.inset).size(width: geometry.size.width, height: 200)) // TODO: - delete
         }
-        
+        .background(Image("background")
+                        .resizable()
+                        .scaledToFill()
+                        .blur(radius: 30))
     }
     
     private func foldedHeight() -> CGFloat {
