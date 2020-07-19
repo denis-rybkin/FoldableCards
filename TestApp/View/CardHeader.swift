@@ -38,7 +38,11 @@ struct CardHeader: View {
             }
                 .opacity(1 - (self.foldPercentage / 100))
         }
-        .offset(x: 0, y: foldOffset < 0 ? 0 : (foldOffset + (foldedLabelsOffset * CGFloat(self.foldPercentage/100))))
+        .offset(x: 0, y: foldOffset < 0 ? 0 : getOffset())
             .font(.headline)
+    }
+    
+    private func getOffset() -> CGFloat {
+        foldOffset + (foldedLabelsOffset * CGFloat(self.foldPercentage/100))
     }
 }
