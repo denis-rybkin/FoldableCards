@@ -13,7 +13,7 @@ struct CardHeader: View {
     @Binding var foldOffset: CGFloat
     
     var body: some View {
-        HStack {
+        HStack(alignment: .top) {
             VStack(alignment: .leading) {
                 Text("Alisa Franklyn")
                     .foregroundColor(.black)
