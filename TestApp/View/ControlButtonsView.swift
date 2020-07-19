@@ -31,7 +31,7 @@ struct ControlButtonsView: View {
                 Button(action: {
                 }) {
                     Image(systemName: "mic")
-                        
+                        .padding(20)
                         .font(.system(size: 26))
                         .background(Circle().fill(Color.white.opacity(0.7)))
                         .shadow(radius: 10, x: 0, y: 20)
