@@ -20,8 +20,11 @@ struct CardHeader: View {
                 Text("Paris, France")
                     .foregroundColor(.black)
                     .opacity(0.5)
-            }.offset(x: 0, y: foldOffset < 0 ? 0 : foldOffset)
+            }
+            .offset(x: 0, y: foldOffset < 0 ? 0 : foldOffset)
+            
             Spacer()
+            
             Button(action: {
             }) {
                 Text("Follow")

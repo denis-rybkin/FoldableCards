@@ -17,7 +17,6 @@ struct MessageView: View {
             .font(.largeTitle)
             .foregroundColor(.black)
             .multilineTextAlignment(.center)
-            .padding()
             .lineLimit(3)
             .opacity(1 - (self.foldPercentage / 100)*3)
         

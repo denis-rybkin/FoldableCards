@@ -25,7 +25,8 @@ struct CardView: View {
     
     let text: String
     
-    let inset: CGFloat = 40
+    let cornerRadius: CGFloat = 40
+    let inset: CGFloat = 30
     
     init(_ text: String) {
         self.text = text
@@ -38,8 +39,9 @@ struct CardView: View {
                 // Top Half
                 VStack {
                     CardHeader(foldOffset: self.$foldOffset)
-                        .padding()
+                        .padding(self.inset)
                     MessageView(foldPercentage: self.$foldPercentage)
+                        .padding([.leading, .trailing], self.inset)
                 }
                 .background(Color.blue.opacity(0.2)) // TODO: - delete
                 
@@ -60,13 +62,13 @@ struct CardView: View {
                             .resizable()
                             .scaledToFill()
                             .blur(radius: 30))
-            .mask(RoundedRectangle(cornerRadius: self.inset)
+            .mask(RoundedRectangle(cornerRadius: self.cornerRadius)
             .padding(.top, self.foldOffset))
             
-            .cornerRadius(self.inset)
+            .cornerRadius(self.cornerRadius)
             .animation(.interactiveSpring())
             .offset(x: self.translation.width, y: 0)
-                
+            
             .rotationEffect(.degrees(Double(self.translation.width
                                             / geometry.size.width) * 25),
                             anchor: .bottom)
@@ -124,7 +126,7 @@ struct CardView: View {
     }
     
     private func foldedHeight() -> CGFloat {
-        return (inset * 2) + 5 // TODO: - fix magic 5
+        return (cornerRadius * 2) + 5 // TODO: - fix magic 5
     }
     
     private func viewHeight(_ geometry: GeometryProxy) -> CGFloat {
