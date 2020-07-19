@@ -13,6 +13,8 @@ struct CardHeader: View {
     @Binding var foldOffset: CGFloat
     @Binding var foldPercentage: Double
     
+    let foldedLabelsOffset: CGFloat = -10
+    
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
@@ -36,7 +38,7 @@ struct CardHeader: View {
             }
                 .opacity(1 - (self.foldPercentage / 100))
         }
-        .offset(x: 0, y: foldOffset < 0 ? 0 : (foldOffset + (-10 * CGFloat(self.foldPercentage/100))))
+        .offset(x: 0, y: foldOffset < 0 ? 0 : (foldOffset + (foldedLabelsOffset * CGFloat(self.foldPercentage/100))))
             .font(.headline)
     }
 }
