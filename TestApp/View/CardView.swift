@@ -114,7 +114,7 @@ struct CardView: View {
                         if self.foldOffset > (self.viewHeight(geometry) / 2) {
                             self.opened = false
                             self.foldPercentage = 100
-                            self.foldOffset = self.viewHeight(geometry) - self.foldedHeight()
+                            self.foldOffset = geometry.size.height - self.foldedHeight()
                             return
                         }
                         self.foldPercentage = 0
@@ -131,7 +131,7 @@ struct CardView: View {
     }
     
     private func foldedHeight() -> CGFloat {
-        return (cornerRadius * 2) + 5 // TODO: - fix magic 5
+        return (self.cornerRadius * 2)
     }
     
     private func viewHeight(_ geometry: GeometryProxy) -> CGFloat {
