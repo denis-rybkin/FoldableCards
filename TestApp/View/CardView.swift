@@ -39,59 +39,30 @@ struct CardView: View {
                 VStack {
                     CardHeader(foldOffset: self.$foldOffset)
                         .padding()
-                    HStack {
-                        Text("How is your quarantine is going so far?")
-                            .font(.largeTitle)
-                            .foregroundColor(.black)
-                            .multilineTextAlignment(.center)
-                            .padding()
-                            .lineLimit(3)
-                            .opacity(1 - (self.foldPercentage / 100)*3)
-                    }
+                    MessageView(foldPercentage: self.$foldPercentage)
                 }
-                .frame(minWidth: 0,
-                       maxWidth: .infinity,
-                       minHeight: 0,
-                       maxHeight: .infinity)
-//                .background(Color.blue) // TODO: - delete
+                .background(Color.blue.opacity(0.2)) // TODO: - delete
+                
+                Divider().background(Color.blue)
                 
                 // Bottom Half
                 VStack {
                     Waveform()
-                        .foregroundColor(.black)
-                        .frame(minWidth: 0,
-                               maxWidth: .infinity,
-                               minHeight: 0,
-                               maxHeight: .infinity)
                         .opacity(1 - (self.foldPercentage / 100))
 //                        .background(Color.purple.opacity(0.3)) // TODO: - delete
                     Text("0:37")
                         .foregroundColor(.black)
                         .opacity(1 - (self.foldPercentage / 100))
                     ControlButtonsView(foldPercentage: self.$foldPercentage)
-                        .frame(minWidth: 0,
-                               maxWidth: .infinity,
-                               minHeight: 0,
-                               maxHeight: .infinity)
                 }
-                .frame(minWidth: 0,
-                       maxWidth: .infinity,
-                       minHeight: 0,
-                       maxHeight: .infinity)
-//                .background(Color.red) // TODO: - delete
-                    
-                .scaledToFit()
-                .clipped()
             }
-            
-            .frame(width: geometry.size.width,
-                   height: self.viewHeight(geometry))
             .background(Image("Steve")
                             .resizable()
                             .scaledToFill()
                             .blur(radius: 30))
             .mask(RoundedRectangle(cornerRadius: self.inset)
             .padding(.top, self.foldOffset))
+            
             .cornerRadius(self.inset)
                 .animation(.interactiveSpring())
             .offset(x: self.translation.width, y: 0)
@@ -142,6 +113,7 @@ struct CardView: View {
                             self.foldOffset = self.viewHeight(geometry) - self.foldedHeight()
                             return
                         }
+                        self.foldPercentage = 0
                         self.foldOffset = 0
                     }
             )

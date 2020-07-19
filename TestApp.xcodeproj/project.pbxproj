@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B722B38224C4F63C00CA5AF3 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B722B38124C4F63C00CA5AF3 /* MessageView.swift */; };
 		B750F67824BF21F600E07F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750F67724BF21F600E07F99 /* AppDelegate.swift */; };
 		B750F67A24BF21F600E07F99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750F67924BF21F600E07F99 /* SceneDelegate.swift */; };
 		B750F67C24BF21F600E07F99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750F67B24BF21F600E07F99 /* ContentView.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B722B38124C4F63C00CA5AF3 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		B750F67424BF21F600E07F99 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B750F67724BF21F600E07F99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B750F67924BF21F600E07F99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				B750F67B24BF21F600E07F99 /* ContentView.swift */,
 				B750F68B24BF2B0200E07F99 /* CardView.swift */,
 				B750F68F24BF441C00E07F99 /* CardHeader.swift */,
+				B722B38124C4F63C00CA5AF3 /* MessageView.swift */,
 				B750F69124BF4D9D00E07F99 /* Waveform.swift */,
 				B750F68D24BF35BB00E07F99 /* ControlButtonsView.swift */,
 			);
@@ -170,6 +173,7 @@
 				B750F68E24BF35BB00E07F99 /* ControlButtonsView.swift in Sources */,
 				B750F69224BF4D9D00E07F99 /* Waveform.swift in Sources */,
 				B750F69024BF441C00E07F99 /* CardHeader.swift in Sources */,
+				B722B38224C4F63C00CA5AF3 /* MessageView.swift in Sources */,
 				B750F67A24BF21F600E07F99 /* SceneDelegate.swift in Sources */,
 				B750F68C24BF2B0200E07F99 /* CardView.swift in Sources */,
 				B750F67C24BF21F600E07F99 /* ContentView.swift in Sources */,
