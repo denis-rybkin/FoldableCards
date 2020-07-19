@@ -49,13 +49,16 @@ struct CardView: View {
                 
                 // Bottom Half
                 VStack {
-//                    Waveform()
-//                        .opacity(1 - (self.foldPercentage / 100))
-////                        .background(Color.purple.opacity(0.3)) // TODO: - delete
+                    Waveform()
+                        .opacity(1 - (self.foldPercentage / 100))
+                        .padding([.leading, .trailing], self.inset)
+//                        .background(Color.purple.opacity(0.3)) // TODO: - delete
                     Text("0:37")
                         .foregroundColor(.black)
                         .opacity(1 - (self.foldPercentage / 100))
+                        
                     ControlButtonsView(foldPercentage: self.$foldPercentage)
+                        .padding([.leading, .trailing], self.inset)
                 }
             }
             .background(Image("Steve")

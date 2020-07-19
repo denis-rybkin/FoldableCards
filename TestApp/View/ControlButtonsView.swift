@@ -33,7 +33,6 @@ struct ControlButtonsView: View {
                     Image(systemName: "mic")
                         
                         .font(.system(size: 26))
-                        .padding(20)
                         .background(Circle().fill(Color.white.opacity(0.7)))
                         .shadow(radius: 10, x: 0, y: 20)
                         .offset(x: (UIScreen.main.bounds.width/5) * CGFloat(self.foldPercentage / 100), y: 0)
@@ -52,7 +51,7 @@ struct ControlButtonsView: View {
     //                    .opacity(1 - (self.foldPercentage / 100))
                 }
             }
-            .padding()
+            .padding(.bottom, 30)
             .foregroundColor(.black)
             .font(.system(size: 26))
         }
