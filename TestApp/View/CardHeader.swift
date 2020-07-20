@@ -36,7 +36,7 @@ struct CardHeader: View {
                     .cornerRadius(15)
                     .foregroundColor(.white)
             }
-                .opacity(1 - (self.foldPercentage / 100))
+                .opacity(buttonOpacity())
         }
             .offset(x: 0, y: foldOffset < 0 ? 0 : getOffset())
             .font(.headline)
@@ -44,5 +44,9 @@ struct CardHeader: View {
     
     private func getOffset() -> CGFloat {
         foldOffset + (foldedLabelsOffset * CGFloat(self.foldPercentage/100))
+    }
+    
+    private func buttonOpacity() -> Double {
+        return 1 - ((self.foldPercentage / 100) * 1.3)
     }
 }
