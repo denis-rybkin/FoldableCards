@@ -52,10 +52,6 @@ struct CardView: View {
                     Waveform()
                         .opacity(1 - (self.foldPercentage / 100))
                         .padding([.leading, .trailing], self.inset)
-                    Text("0:37")
-                        .foregroundColor(.black)
-                        .opacity(1 - (self.foldPercentage / 100))
-                        
                     ControlButtonsView(foldPercentage: self.$foldPercentage)
                         .padding([.leading, .trailing], self.inset)
                 }

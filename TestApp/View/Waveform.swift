@@ -25,17 +25,20 @@ struct Waveform: View {
     
     var body: some View {
         GeometryReader { geometry in
-            HStack(spacing: self.spacing) {
-                ForEach(0..<Waveform.waveformData.count, id: \.self) { i in
-                    ZStack {
-                        RoundedRectangle(cornerRadius: self.spacing)
-                            .fill(self.progress(i: i) ? Color.black.opacity(0.4) : Color.black)
-                            .frame(width: (geometry.size.width - CGFloat(self.dataSize) * self.spacing) / CGFloat(self.dataSize),
-                                   height: CGFloat(Waveform.waveformData[i]))
+            VStack {
+                HStack(spacing: self.spacing) {
+                    ForEach(0..<Waveform.waveformData.count, id: \.self) { i in
+                        ZStack {
+                            RoundedRectangle(cornerRadius: self.spacing)
+                                .fill(self.progress(i: i) ? Color.black.opacity(0.4) : Color.black)
+                                .frame(width: (geometry.size.width - CGFloat(self.dataSize) * self.spacing) / CGFloat(self.dataSize),
+                                       height: CGFloat(Waveform.waveformData[i]))
+                        }
                     }
                 }
+                Text("0:37")
+                    .foregroundColor(.black)
             }
-            .foregroundColor(.black)
         }
     }
     
