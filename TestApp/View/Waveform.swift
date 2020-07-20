@@ -29,7 +29,7 @@ struct Waveform: View {
                 ForEach(0..<Waveform.waveformData.count, id: \.self) { i in
                     ZStack {
                         RoundedRectangle(cornerRadius: self.spacing)
-                            .fill(self.firstOrLast(i: i) ? Color.blue : Color.black)
+                            .fill(self.progress(i: i) ? Color.black.opacity(0.4) : Color.black)
                             .frame(width: (geometry.size.width - CGFloat(self.dataSize) * self.spacing) / CGFloat(self.dataSize),
                                    height: CGFloat(Waveform.waveformData[i]))
                     }
@@ -40,8 +40,8 @@ struct Waveform: View {
     }
     
     // TODO: - only for debug
-    private func firstOrLast(i: Int) -> Bool {
-        return i == 0 || i == Waveform.waveformData.count-1
+    private func progress(i: Int) -> Bool {
+        return i > 15
     }
 }
 
