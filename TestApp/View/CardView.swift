@@ -93,9 +93,6 @@ struct CardView: View {
                             switch self.dragDirection {
                             case .horisontal:
                                 self.translation = value.translation
-                                if self.opened {
-                                    self.foldOffset = 0
-                                }
                             case .vertical:
                                 let offset = value.location.y - self.startDragPoint!.y
                                 
