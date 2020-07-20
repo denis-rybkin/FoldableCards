@@ -40,19 +40,18 @@ struct CardView: View {
                 VStack {
                     CardHeader(foldOffset: self.$foldOffset, foldPercentage: self.$foldPercentage)
                         .padding(self.inset)
+                    Spacer()
                     MessageView(foldPercentage: self.$foldPercentage)
                         .padding([.leading, .trailing], self.inset)
+                    Spacer()
                 }
-                    .background(Color.blue.opacity(0.2)) // TODO: - delete
-                
-                Divider().background(Color.blue)
+                    .frame(height: geometry.size.height / 2, alignment: .top)
                 
                 // Bottom Half
                 VStack {
                     Waveform()
                         .opacity(1 - (self.foldPercentage / 100))
                         .padding([.leading, .trailing], self.inset)
-//                        .background(Color.purple.opacity(0.3)) // TODO: - delete
                     Text("0:37")
                         .foregroundColor(.black)
                         .opacity(1 - (self.foldPercentage / 100))
@@ -60,6 +59,7 @@ struct CardView: View {
                     ControlButtonsView(foldPercentage: self.$foldPercentage)
                         .padding([.leading, .trailing], self.inset)
                 }
+                    .frame(height: geometry.size.height / 2)
             }
             .background(Image("Steve")
                             .resizable()

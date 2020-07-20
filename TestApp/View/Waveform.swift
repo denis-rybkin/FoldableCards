@@ -37,7 +37,6 @@ struct Waveform: View {
             }
             .foregroundColor(.black)
         }
-        .background(Color.debug)
     }
     
     // TODO: - only for debug
@@ -52,6 +51,3 @@ struct Waveform_Previews: PreviewProvider {
     }
 }
 
-extension Color {
-    static var debug: Color { return Color.red.opacity(0.5) }
-}
