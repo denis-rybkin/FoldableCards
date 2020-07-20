@@ -117,6 +117,13 @@ struct CardView: View {
                         self.foldOffset = 0
                     }
             )
+            .onTapGesture {
+                let needOpen = self.foldPercentage == 100
+                if needOpen {
+                    self.foldOffset = 0
+                    self.foldPercentage = 0
+                }
+            }
             
 //                .clipShape(RoundedRectangle(cornerRadius: self.inset).size(width: geometry.size.width, height: 200)) // TODO: - delete
         }
