@@ -12,8 +12,11 @@ struct CardView: View {
     
     let black: Double
     
-    init(black: Double) {
+    let record: CardsStackView.Record
+    
+    init(black: Double, record: CardsStackView.Record) {
         self.black = black
+        self.record = record
     }
     
     enum DragDirection {
@@ -43,7 +46,10 @@ struct CardView: View {
                 
                 // Top Half
                 VStack {
-                    CardHeader(foldOffset: self.$foldOffset, foldPercentage: self.$foldPercentage)
+                    CardHeader(foldOffset: self.$foldOffset,
+                               foldPercentage: self.$foldPercentage,
+                               name: self.record.name,
+                               city: self.record.city)
                         .padding(self.inset)
                     Spacer()
                     MessageView(foldPercentage: self.$foldPercentage)

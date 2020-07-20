@@ -13,14 +13,17 @@ struct CardHeader: View {
     @Binding var foldOffset: CGFloat
     @Binding var foldPercentage: Double
     
+    let name: String
+    let city: String
+    
     let foldedLabelsOffset: CGFloat = -10
     
     var body: some View {
         HStack(alignment: .top) {
             VStack(alignment: .leading) {
-                Text("Alisa Franklyn")
+                Text(name)
                     .foregroundColor(.black)
-                Text("Paris, France")
+                Text(city)
                     .foregroundColor(.black)
                     .opacity(0.5)
             }
