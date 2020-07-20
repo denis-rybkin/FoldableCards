@@ -27,8 +27,8 @@ struct ControlButtonsView: View {
                 }) {
                     Image(systemName: "pause")
                         .frame(width: 26, height: 18.5)
-                        .offset(x: xOffset() * 1.2)
                 }
+                .offset(x: xOffset() * 1.2)
                 Spacer()
                 Button(action: {
                 }) {
@@ -37,8 +37,9 @@ struct ControlButtonsView: View {
                         .font(.system(size: 26))
                         .background(Circle().fill(Color.white.opacity(0.7)).opacity(1 - (self.foldPercentage / 100)))
                         .shadow(radius: 10, x: 0, y: 20)
-                        .offset(x: xOffset())
+                        
                 }
+                .offset(x: xOffset())
                 Spacer()
                 Button(action: {
                 }) {
