@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B722B38224C4F63C00CA5AF3 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B722B38124C4F63C00CA5AF3 /* MessageView.swift */; };
+		B74C2D5A24C532C300D8F5F7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74C2D5924C532C300D8F5F7 /* CardView.swift */; };
 		B750F67824BF21F600E07F99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750F67724BF21F600E07F99 /* AppDelegate.swift */; };
 		B750F67A24BF21F600E07F99 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750F67924BF21F600E07F99 /* SceneDelegate.swift */; };
 		B750F67C24BF21F600E07F99 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750F67B24BF21F600E07F99 /* ContentView.swift */; };
 		B750F67E24BF21F800E07F99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B750F67D24BF21F800E07F99 /* Assets.xcassets */; };
 		B750F68124BF21F800E07F99 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B750F68024BF21F800E07F99 /* Preview Assets.xcassets */; };
 		B750F68424BF21F800E07F99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B750F68224BF21F800E07F99 /* LaunchScreen.storyboard */; };
-		B750F68C24BF2B0200E07F99 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750F68B24BF2B0200E07F99 /* CardView.swift */; };
+		B750F68C24BF2B0200E07F99 /* CardsStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750F68B24BF2B0200E07F99 /* CardsStackView.swift */; };
 		B750F68E24BF35BB00E07F99 /* ControlButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750F68D24BF35BB00E07F99 /* ControlButtonsView.swift */; };
 		B750F69024BF441C00E07F99 /* CardHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750F68F24BF441C00E07F99 /* CardHeader.swift */; };
 		B750F69224BF4D9D00E07F99 /* Waveform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B750F69124BF4D9D00E07F99 /* Waveform.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		B722B38124C4F63C00CA5AF3 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		B74C2D5924C532C300D8F5F7 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		B750F67424BF21F600E07F99 /* TestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B750F67724BF21F600E07F99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B750F67924BF21F600E07F99 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,7 +32,7 @@
 		B750F68024BF21F800E07F99 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B750F68324BF21F800E07F99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B750F68524BF21F800E07F99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B750F68B24BF2B0200E07F99 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		B750F68B24BF2B0200E07F99 /* CardsStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsStackView.swift; sourceTree = "<group>"; };
 		B750F68D24BF35BB00E07F99 /* ControlButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButtonsView.swift; sourceTree = "<group>"; };
 		B750F68F24BF441C00E07F99 /* CardHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHeader.swift; sourceTree = "<group>"; };
 		B750F69124BF4D9D00E07F99 /* Waveform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waveform.swift; sourceTree = "<group>"; };
@@ -89,7 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				B750F67B24BF21F600E07F99 /* ContentView.swift */,
-				B750F68B24BF2B0200E07F99 /* CardView.swift */,
+				B750F68B24BF2B0200E07F99 /* CardsStackView.swift */,
+				B74C2D5924C532C300D8F5F7 /* CardView.swift */,
 				B750F68F24BF441C00E07F99 /* CardHeader.swift */,
 				B722B38124C4F63C00CA5AF3 /* MessageView.swift */,
 				B750F69124BF4D9D00E07F99 /* Waveform.swift */,
@@ -170,12 +173,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B750F67824BF21F600E07F99 /* AppDelegate.swift in Sources */,
+				B74C2D5A24C532C300D8F5F7 /* CardView.swift in Sources */,
 				B750F68E24BF35BB00E07F99 /* ControlButtonsView.swift in Sources */,
 				B750F69224BF4D9D00E07F99 /* Waveform.swift in Sources */,
 				B750F69024BF441C00E07F99 /* CardHeader.swift in Sources */,
 				B722B38224C4F63C00CA5AF3 /* MessageView.swift in Sources */,
 				B750F67A24BF21F600E07F99 /* SceneDelegate.swift in Sources */,
-				B750F68C24BF2B0200E07F99 /* CardView.swift in Sources */,
+				B750F68C24BF2B0200E07F99 /* CardsStackView.swift in Sources */,
 				B750F67C24BF21F600E07F99 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -19,7 +19,7 @@ struct ContentView: View {
  
     var body: some View {
         TabView(selection: $selection) {
-            CardView("Card View")
+            CardsStackView()
                 .tabItem {
                     Image(systemName: "rectangle.on.rectangle.angled")
                         .font(.system(size: 20))
