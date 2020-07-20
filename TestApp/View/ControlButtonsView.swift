@@ -76,6 +76,6 @@ struct ControlButtonsView: View {
     }
     
     private func buttonsOpacity() -> Double {
-        return 1 - (self.foldPercentage / 100)
+        return 1 - ((self.foldPercentage / 100) * 1.3)
     }
 }
