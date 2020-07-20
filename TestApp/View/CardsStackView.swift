@@ -22,16 +22,16 @@ struct CardsStackView: View {
     var body: some View {
         ZStack {
             ForEach(getLastThree().indices) { index in
-                if index == 0 { // last
+                if index == 0 {
                     CardView(black: 0.75, record: self.getLastThree()[index])
                         .padding(self.padding)
                         .padding([.leading, .trailing], self.padding)
                         .offset(y: 40)
-                } else if index == 1 { // last but one
+                } else if index == 1 {
                     CardView(black: 0.5, record: self.getLastThree()[index])
                         .padding(self.padding)
                         .offset(y: 30)
-                } else { // last but two
+                } else {
                     CardView(black: 0, record: self.getLastThree()[index])
                 }
             }
