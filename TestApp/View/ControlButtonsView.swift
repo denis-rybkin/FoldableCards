@@ -21,7 +21,7 @@ struct ControlButtonsView: View {
                     print("pressed heart")
                 }) {
                     Image(systemName: "heart")
-                        .opacity(1 - (self.foldPercentage / 100))
+                        .opacity(buttonsOpacity())
                 }
                 .disabled(foldPercentage == 100)
                 Spacer()
@@ -40,7 +40,7 @@ struct ControlButtonsView: View {
                     Image(systemName: "mic")
                         .padding(20)
                         .font(.system(size: 26))
-                        .background(Circle().fill(Color.white.opacity(0.7)).opacity(1 - (self.foldPercentage / 100)))
+                        .background(Circle().fill(Color.white.opacity(0.7)).opacity(buttonsOpacity()))
                         .shadow(radius: 10, x: 0, y: 20)
                 }
                 .zIndex(1)
@@ -50,7 +50,7 @@ struct ControlButtonsView: View {
                     print("pressed goforward")
                 }) {
                     Image(systemName: "goforward.10")
-                        .opacity(1 - (self.foldPercentage / 100))
+                        .opacity(buttonsOpacity())
                 }
                 .disabled(foldPercentage == 100)
                 Spacer()
@@ -58,7 +58,7 @@ struct ControlButtonsView: View {
                     print("pressed ellipsis")
                 }) {
                     Image(systemName: "ellipsis")
-                        .opacity(1 - (self.foldPercentage / 100))
+                        .opacity(buttonsOpacity())
                 }
             }
             .padding(.bottom, 30)
@@ -73,5 +73,9 @@ struct ControlButtonsView: View {
     
     private func xOffset() -> CGFloat {
         (UIScreen.main.bounds.width/2 - 40) * CGFloat(self.foldPercentage / 100)
+    }
+    
+    private func buttonsOpacity() -> Double {
+        return 1 - (self.foldPercentage / 100)
     }
 }
