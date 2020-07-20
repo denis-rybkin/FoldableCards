@@ -50,7 +50,7 @@ struct ControlButtonsView: View {
                     print("pressed goforward")
                 }) {
                     Image(systemName: "goforward.10")
-                        .opacity(buttonsOpacity())
+                        .opacity(1 - ((self.foldPercentage / 100) * 3))
                 }
                 .disabled(foldPercentage == 100)
                 Spacer()
