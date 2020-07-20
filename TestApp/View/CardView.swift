@@ -28,6 +28,8 @@ struct CardView: View {
     let cornerRadius: CGFloat = 40
     let inset: CGFloat = 30
     
+    let stackViewSpace: CGFloat = 30
+    
     init(_ text: String) {
         self.text = text
     }
@@ -45,7 +47,7 @@ struct CardView: View {
                         .padding([.leading, .trailing], self.inset)
                     Spacer()
                 }
-                    .frame(height: geometry.size.height / 2, alignment: .top)
+                .frame(height: (geometry.size.height-self.stackViewSpace) / 2, alignment: .top)
                 
                 // Bottom Half
                 VStack {
@@ -55,8 +57,9 @@ struct CardView: View {
                     ControlButtonsView(foldPercentage: self.$foldPercentage)
                         .padding([.leading, .trailing], self.inset)
                 }
-                    .frame(height: geometry.size.height / 2)
+                .frame(height: (geometry.size.height-self.stackViewSpace) / 2)
             }
+//            .frame(height: geometry.size.height - 100, alignment: .top)
             .background(Image("Steve")
                             .resizable()
                             .scaledToFill()
@@ -110,7 +113,7 @@ struct CardView: View {
                         if self.foldOffset > (self.viewHeight(geometry) / 2) {
                             self.opened = false
                             self.foldPercentage = 100
-                            self.foldOffset = geometry.size.height - self.foldedHeight()
+                            self.foldOffset = (geometry.size.height - self.stackViewSpace) - self.foldedHeight()
                             return
                         }
                         self.foldPercentage = 0
@@ -124,8 +127,7 @@ struct CardView: View {
                     self.foldPercentage = 0
                 }
             }
-            
-//                .clipShape(RoundedRectangle(cornerRadius: self.inset).size(width: geometry.size.width, height: 200)) // TODO: - delete
+            .padding(.bottom, self.stackViewSpace)
         }
         .background(Image("background")
                         .resizable()
@@ -138,7 +140,7 @@ struct CardView: View {
     }
     
     private func viewHeight(_ geometry: GeometryProxy) -> CGFloat {
-        return geometry.size.height * 0.75
+        return (geometry.size.height + stackViewSpace) * 0.75
     }
     
     private func distance(_ a: CGPoint, _ b: CGPoint) -> CGFloat {
