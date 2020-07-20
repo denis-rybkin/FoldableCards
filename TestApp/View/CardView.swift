@@ -87,7 +87,7 @@ struct CardView: View {
                             if self.startDragPoint == nil {
                                 self.startDragPoint = value.location
                             }
-                            let needSetDirection = self.distance(self.startDragPoint!, value.location) > self.tresholdDirection
+                            let needSetDirection = self.distance(self.startDragPoint!, value.location) > self.tresholdDirection && self.dragDirection == .none
                             if needSetDirection {
                                 let isHorisontal = abs(self.startDragPoint!.x - value.location.x) > abs(self.startDragPoint!.y - value.location.y)
                                 if isHorisontal {
