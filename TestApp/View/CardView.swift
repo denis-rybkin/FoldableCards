@@ -62,8 +62,6 @@ struct CardView: View {
                 }
                 .frame(height: (geometry.size.height-self.stackViewSpace) / 2)
             }
-                //            .frame(height: geometry.size.height - 100, alignment: .top)
-                
                 .background(Image("Steve")
                     .resizable()
                     .scaledToFill()
@@ -155,7 +153,7 @@ struct CardView: View {
         return CGFloat(sqrt(xDist * xDist + yDist * yDist))
     }
     
-    struct BlackFadeView: View {
+    private struct BlackFadeView: View {
         var body: some View {
             Color.black.edgesIgnoringSafeArea(.all)
         }
