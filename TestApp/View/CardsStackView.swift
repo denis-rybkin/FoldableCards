@@ -15,9 +15,9 @@ struct CardsStackView: View {
     var body: some View {
         ZStack {
             CardView(black: 0.75)
-            .padding(padding)
-            .padding([.leading, .trailing], padding)
-            .offset(y: 40)
+                .padding(padding)
+                .padding([.leading, .trailing], padding)
+                .offset(y: 40)
             CardView(black: 0.5)
                 .padding(padding)
                 .offset(y: 30)
