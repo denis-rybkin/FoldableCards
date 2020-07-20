@@ -18,36 +18,44 @@ struct ControlButtonsView: View {
 //        GeometryReader { geometry in
             HStack {
                 Button(action: {
+                    print("pressed heart")
                 }) {
                     Image(systemName: "heart")
                         .opacity(1 - (self.foldPercentage / 100))
                 }
+                .disabled(foldPercentage == 100)
                 Spacer()
                 Button(action: {
+                    print("pressed pause")
                 }) {
                     Image(systemName: "pause")
                         .frame(width: 26, height: 18.5)
                 }
                 .offset(x: xOffset() * 1.2)
+                .zIndex(1)
                 Spacer()
                 Button(action: {
+                    print("pressed mic")
                 }) {
                     Image(systemName: "mic")
                         .padding(20)
                         .font(.system(size: 26))
                         .background(Circle().fill(Color.white.opacity(0.7)).opacity(1 - (self.foldPercentage / 100)))
                         .shadow(radius: 10, x: 0, y: 20)
-                        
                 }
+                .zIndex(1)
                 .offset(x: xOffset())
                 Spacer()
                 Button(action: {
+                    print("pressed goforward")
                 }) {
                     Image(systemName: "goforward.10")
                         .opacity(1 - (self.foldPercentage / 100))
                 }
+                .disabled(foldPercentage == 100)
                 Spacer()
                 Button(action: {
+                    print("pressed ellipsis")
                 }) {
                     Image(systemName: "ellipsis")
                         .opacity(1 - (self.foldPercentage / 100))
