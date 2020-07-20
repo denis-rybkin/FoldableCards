@@ -10,14 +10,16 @@ import SwiftUI
 
 struct CardsStackView: View {
     
+    private let padding: CGFloat = 15
+    
     var body: some View {
         ZStack {
             CardView(black: 0.75)
-            .padding()
-            .padding([.leading, .trailing], 20)
+            .padding(padding)
+            .padding([.leading, .trailing], padding)
             .offset(y: 40)
             CardView(black: 0.5)
-                .padding()
+                .padding(padding)
                 .offset(y: 30)
             CardView(black: 0)
         }
