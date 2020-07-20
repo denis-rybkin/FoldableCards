@@ -12,8 +12,14 @@ struct CardsStackView: View {
     
     var body: some View {
         ZStack {
-            CardView()
-            CardView()
+            CardView(black: 0.75)
+            .padding()
+            .padding([.leading, .trailing], 20)
+            .offset(y: 40)
+            CardView(black: 0.5)
+                .padding()
+                .offset(y: 30)
+            CardView(black: 0)
         }
             .background(Image("background")
                             .resizable()
