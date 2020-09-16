@@ -36,6 +36,7 @@
 		B750F68D24BF35BB00E07F99 /* ControlButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlButtonsView.swift; sourceTree = "<group>"; };
 		B750F68F24BF441C00E07F99 /* CardHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardHeader.swift; sourceTree = "<group>"; };
 		B750F69124BF4D9D00E07F99 /* Waveform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Waveform.swift; sourceTree = "<group>"; };
+		B7B151652512B1FF00F94D5A /* foldable cards.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "foldable cards.mp4"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +53,7 @@
 		B750F66B24BF21F600E07F99 = {
 			isa = PBXGroup;
 			children = (
+				B7B151652512B1FF00F94D5A /* foldable cards.mp4 */,
 				B750F67624BF21F600E07F99 /* TestApp */,
 				B750F67524BF21F600E07F99 /* Products */,
 			);
