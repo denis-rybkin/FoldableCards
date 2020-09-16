@@ -1,0 +1,2 @@
+# FoldableCards
+SwiftUI interactions tests
